@@ -1,0 +1,128 @@
+@import "_vars";
+
+html {
+  font-family: @font-primary;
+  font-size: @font-size;
+  color: @font-color;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content:"";
+	display: table;
+}
+.clearfix:after {clear: both;}
+
+.row {
+	display: flex;
+}
+
+.header {
+
+  &__top {
+  padding: 0 23px;
+	font-size: 12px;
+  background: #000000;
+  }
+
+  &__content {
+    padding: 0 23px;
+    background: #373737;
+  }
+}
+
+.menu__link {
+	padding-right: 30px;
+	float: left;
+}
+
+.menu__item--user {float: left;}
+.menu__list--user {float: right;}
+
+.menu__logo {
+	width: 200px;
+	height: 35px;
+	padding-top: 10px;
+	padding-right: 20px;
+	float: left;
+}
+.menu__logo-absolute {
+	padding: 20px;
+  margin-right: 355px;
+	fill: #fff;
+	cursor: pointer;
+
+	&:hover {
+		fill: @color--logo-absolute;
+	}
+}
+
+.link {
+  text-decoration: none;
+	color: #A0A59F;
+	padding: 10px;
+
+	&--white {
+		color: #A0A59F;
+		&:hover {color: #fff;}
+	}
+
+	&--first-white {
+		color: #fff;
+		font-weight: bold;
+
+		&:hover {color: #A0A59F;}
+	}
+
+	&--yellow {
+		color: #fff;
+		padding: 20px 10px 20px 10px;
+
+		&:hover {
+			border-bottom: 3px solid @color-primary;
+			color: @color-primary;
+		}
+	}
+
+	&--dotted {
+		border-bottom: 1px dashed #fff;
+	}
+
+	&--active {
+		border-bottom: 3px solid @color-primary;
+		color: @color-primary;
+	}
+
+	&--ad::before  {
+	  content: '';
+	  background-image: url('..//img/header-icons.png');
+	  background-repeat: no-repeat;
+	  background-position: -66px 0;
+	  padding: 0 3px 0 16px;
+	}
+
+	&--sign::before  {
+		content: '';
+		background-image: url('..//img/header-icons.png');
+		background-repeat: no-repeat;
+		background-position: -17px -68px;
+		padding: 0 0 0 16px;
+	}
+
+	&--login::before  {
+	  content: '';
+	  background-image: url('..//img/header-icons.png');
+	  background-repeat: no-repeat;
+	  background-position: -17px -34px;
+	  padding: 0 0 0 16px;
+	}
+
+	&--special-offer {color: #FF7D41;}
+	&--special-offer::before {
+		content: '';
+	  background-image: url('..//img/header-icons.png');
+	  background-repeat: no-repeat;
+	  background-position: 0 -109px;
+	  padding: 10px 3px 0 17px;
+}
+	}
